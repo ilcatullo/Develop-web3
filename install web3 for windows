@@ -1,0 +1,61 @@
+Questo articolo è dedicato a tutti coloro che vogliono programmare con javascript e realizzare una DApp su tecnologia Ethereum.
+Per fare ciò è necessario istallare alcune cose sul nostro PC. La procedura descritta è quella che io ho usata su un pc portatile nuovo con windows 10.
+L'articolo è pensato e scritto per tutti coloro che sono alle prime armi con lo studio e l'applicazione di questi nuovi strumenti di programmazione.
+Partiamo !!
+
+Quello che segue è la mia personale istallazione. Sono partito dall'istallare GIT, quando fate partire il setup, lasciate tutto in default e andate fino in fondo nell'istallazione.
+
+A questo punto andiamo a scaricare dal sito ufficiale, Node.js, sarà questo applicativo che ci permetterà di avere il gestore dei pacchetti  NPM alla base di tutto. Scegliete la versione LTS.
+
+Una volta scaricato installate Node.js, Lasciate tutto in default, avremo istallato l'ambiente di esecuzione javascript asincrono. Come detto in precedenza, al suo interno viene fornito anche il gestore di pachetti NPM  . Per verificare se abbiamo istallato correttamente , in questa prima fase, apriamo il propt dei comandi DOS di Windows
+
+Già nella posizione di apertura digitate:
+
+npm -v
+
+Premete invio , -v stà per versione. Se vi risponde visualizzando la versione istallata, vuol dire che è andato tutto a buon fine. Ora viene la parte delicata. Node.js , se avete lasciato tutto in default, si è istallato nella directory:
+
+c:\Program Files\nodejs
+
+Ricordate, da ora in poi, ponetevi sempre in questa cartella prima di operare. Ora dobbiamo istallare node-gyp. Apriamo il prompt dei comandi, mettiamoci nella directory di node e scriviamo:
+
+npm install -g node-gyp
+
+questo comando istalla node-gyp  con la -g che installa a livello globale.
+Ora dobbiamo istallare Python 2.7 , attenzione, istallate questa versione, perchè, tra una versione a l'altra cambia anche di compatibilità. Andate al seguente link e scaricate il pacchetto.
+
+Attenzione: node-gyp non è compatibile con la versione Python 3.0
+
+Riportatevi di nuovo sul prompt di windows, entrate nella directory di nodejs e digitate:
+
+npm install --global -- production windows-build-tools
+
+Dovrebbe apparire in verde la scritta : ALL DONE.
+
+Non preoccupatevi del tempo o se vedete che si ferma, l'operazione ci mette tempo,su alcuni processori.
+
+A questo punto, riavviate il computer.
+
+Ora dobbiamo creare un nostro progetto, creiamo una cartella in 
+
+c:\\"nome a nostra scelta" 
+
+A questo punto entriamo di nuovo nel prompt dei comandi come amministratore, entrimo nella directory dove è installato nodejs e digitiamo quanto segue:
+
+npm init
+
+Premendo invio compariranno una serie di richieste. Basta premere sempre invio come conferma, o volendo, compilare i campi, è uguale. Con questa operazione abbiamo creato il nostro pacchetto .json 
+A questo punto dobbiamo istallare web3.js, è la libreria javascript più usata per interagire con ethereum. Leggendo sui vari forum ci sono anche ethjs ed ethers.js
+Passiamo all'istallazione. Apriamo il prompt dei comandi, mettiamoci nella directory dove abbiamo installato nodejs e digitiamo:
+
+npm install web3@1.0.0-beta.35 --save
+
+il comando --save aggiunge questa dipendenza nel nostro file .json
+Per verificare che abbiamo installato web3 correttaente basta andare del prompt dei comandi andare nella directory di installazione e far partire node scrivendo:
+
+node
+
+A questo punto scrivete web3 e vi dovrebbe comparire la versione.
+Ora siamo pronti  per creare il nostro primo progetto.
+ATTENZIONE: Ogni qualvolta si effettua la procedura di INIT e cambiate il nome al progetto, bisogna reistallare WEB3.
+
